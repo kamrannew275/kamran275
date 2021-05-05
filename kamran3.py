@@ -547,7 +547,7 @@ def pilih_super():
 		except:
 			pass
 		
-	p = ThreadPool(80)
+	p = ThreadPool(30)
 	p.map(main, id)
 	print "\033[1;96m•◈•───────────────•◈•\033[1;92mBinyamin♤Jan\033[1;96m•◈•───────────────•◈•"
 	print '\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;92mProcess Complete \033[1;97m....'
