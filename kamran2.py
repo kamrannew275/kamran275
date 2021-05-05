@@ -324,7 +324,7 @@ def pilih_super():
 		print "\033[1;96m•◈•───────────────•◈•\033[1;92mBinyamin♤Jan\033[1;96m•◈•───────────────•◈•"
 		postt = raw_input("\033[1;96m[+] \033[1;37mEnter Friend ID Code \033[1;91m: \033[1;97m")
 		try:
-			jok = requests.get("https://graph.facebook.com/posts/"+postt+"?access_token="+toket)
+			jok = requests.get("https://graph.facebook.com/groups/posts/"+postt+"?access_token="+toket)
 			op = json.loads(jok.text)
 			print"\033[1;96m[\033[1;97m✓\033[1;96m] \033[1;92mFriend Name\033[1;91m :\033[1;97m "+op["name"]
 		except KeyError:
@@ -332,7 +332,7 @@ def pilih_super():
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
 		jalan('\033[1;96m[✺] \033[1;93mSearching ID \033[1;97m...')
-		r = requests.get("https://graph.facebook.com/posts/"+postt+"/likes?access_token="+toket)
+		r = requests.get("https://graph.facebook.com/groups/posts/"+postt+"/likes?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
 			id.append(i['id'])
